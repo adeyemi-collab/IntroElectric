@@ -201,18 +201,26 @@ footer {
     letter-spacing: 0.5px;
 }
 
-/* PUFFY NAV (if needed for other pages) */
+/* PUFFY NAV - CENTERED */
 .puffy-nav {
     background-color: #f5f5f5;
     padding: 20px 40px;
     border-radius: 50px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 50px;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .puffy-nav ul {
     display: flex;
     list-style: none;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .puffy-nav a {
@@ -285,6 +293,19 @@ footer {
         width: 95%;
         padding: 25px;
     }
+
+    .puffy-nav {
+        padding: 15px 20px;
+    }
+
+    .puffy-nav ul {
+        gap: 10px;
+    }
+
+    .puffy-nav a {
+        padding: 10px 16px;
+        font-size: 0.9em;
+    }
 }
 
 @media (max-width: 480px) {
@@ -321,5 +342,18 @@ footer {
     .feature-card p {
         font-size: 0.9em;
         padding: 0 15px 20px 15px;
+    }
+
+    .puffy-nav {
+        padding: 12px 15px;
+    }
+
+    .puffy-nav ul {
+        gap: 8px;
+    }
+
+    .puffy-nav a {
+        padding: 8px 12px;
+        font-size: 0.85em;
     }
 }
