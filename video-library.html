@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Library - IntroElectric</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="quiz-page">
+
+<button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+<div id="sidebar" class="sidebar">
+    <h2>Course Content</h2>
+
+    <h3>Week 1</h3>
+    <a href="videos/week1.html">Video</a>
+
+    <h3>Week 2</h3>
+    <a href="videos/week2.html">Video</a>
+
+    <h3>Week 3</h3>
+    <a href="videos/week3.html">Video</a>
+</div>
+
+<header>
+    <h1>Video Library</h1>
+</header>
+
+<div class="container">
+
+<h2>Select a Video</h2>
+
+<ul class="quiz-list">
+    <li><a href="videos/week1.html">Week 1: Intro to LTSpice</a></li>
+    <li><a href="videos/week2.html">Week 2: Kirchhoff’s Laws</a></li>
+    <li><a href="videos/week3.html">Week 3: RLC Circuits</a></li>
+</ul>
+
+</div>
+
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
