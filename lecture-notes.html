@@ -7,14 +7,9 @@
 
 <body class="quiz-page">
 
-<header>
-    <h1>IntroElectric</h1>
-    <p>Lecture Notes</p>
-</header>
+<!-- MENU BUTTON -->
+<button class="menu-btn" onclick="toggleSidebar()">☰ Menu</button>
 
-<nav>
-    <a href="home.html">Home</a>
-</nav>
 <!-- SIDEBAR -->
 <div id="sidebar" class="sidebar">
 
@@ -37,14 +32,27 @@
 
 </div>
 
+<header>
+    <h1>Lecture Notes</h1>
+    <p>Study Materials</p>
+</header>
+
+<nav class="puffy-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lecture-notes.html">Lecture Notes</a></li>
+        <li><a href="quizzes.html">Quizzes</a></li>
+        <li><a href="video-library.html">Videos</a></li>
+    </ul>
+</nav>
 
 <div class="container">
 
 <h2>Select Topic</h2>
 
 <ul class="quiz-list">
-    <li><a href="notes/ohms-law.html">Ohm’s Law</a></li>
-    <li><a href="notes/kirchhoff.html">Kirchhoff’s Laws</a></li>
+    <li><a href="notes/ohms-law.html">Ohm's Law</a></li>
+    <li><a href="notes/kirchhoff.html">Kirchhoff's Laws</a></li>
     <li><a href="notes/rlc.html">AC / RLC Circuits</a></li>
 </ul>
 
@@ -53,6 +61,12 @@
 <footer>
     © 2026 IntroElectric
 </footer>
+
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
