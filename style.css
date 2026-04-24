@@ -11,22 +11,45 @@ header {
     padding: 30px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    background: rgba(0,0,0,0.2);
-    padding: 10px;
+body {
+  background-color: #efeeee; /* The background must match the navbar color */
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-nav ul li {
-    margin: 0 15px;
+.puffy-nav {
+  background-color: #efeeee;
+  padding: 20px 40px;
+  border-radius: 50px; /* Highly rounded corners for a "puffier" look */
+  /* This double shadow creates the 3D raised effect */
+  box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6), 
+             -9px -9px 16px rgba(255, 255, 255, 0.5);
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+.puffy-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
+
+.puffy-nav a {
+  text-decoration: none;
+  color: #444;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Inset effect for the active link or on hover */
+.puffy-nav a.active, .puffy-nav a:hover {
+  box-shadow: inset 5px 5px 10px #cbced1, 
+              inset -5px -5px 10px #ffffff;
+  color: #6d5dfc; /* Subtle color change */
+}
+
 
 .features {
     display: flex;
