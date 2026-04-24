@@ -116,7 +116,7 @@ header p {
     justify-content: center;
     gap: 35px;
     padding: 60px 20px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -135,6 +135,7 @@ header p {
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     border: 1px solid rgba(102, 126, 234, 0.1);
+    flex-shrink: 0;
 }
 
 .feature-card::before {
@@ -189,13 +190,15 @@ header p {
 
 /* FOOTER */
 footer {
-    background: linear-gradient(135deg, #1d3557 0%, #0f1f2e 100%);
-    padding: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 40px 30px;
     text-align: center;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.95);
     margin-top: 60px;
-    border-top: 1px solid rgba(102, 126, 234, 0.2);
+    box-shadow: 0 -10px 40px rgba(102, 126, 234, 0.15);
     font-size: 0.95em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 /* PUFFY NAV (if needed for other pages) */
@@ -270,6 +273,7 @@ footer {
     .features {
         gap: 25px;
         padding: 40px 15px;
+        flex-wrap: wrap;
     }
 
     .feature-card {
@@ -301,6 +305,7 @@ footer {
     .features {
         gap: 20px;
         padding: 30px 15px;
+        flex-wrap: wrap;
     }
 
     .feature-card {
