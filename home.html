@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IntroElectric</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- MENU BUTTON -->
+<button class="menu-btn" onclick="toggleSidebar()">☰ Menu</button>
+
+<!-- SIDEBAR -->
+<div id="sidebar" class="sidebar">
+
+    <h2>Course Content</h2>
+
+    <h3>Week 1</h3>
+    <a href="notes/ohms-law.html">Topic</a>
+    <a href="videos/week1.html">Video</a>
+    <a href="quizzes/fundamentals.html">Quiz</a>
+
+    <h3>Week 2</h3>
+    <a href="notes/kirchhoff.html">Topic</a>
+    <a href="videos/week2.html">Video</a>
+    <a href="quizzes/circuit-theorems.html">Quiz</a>
+
+    <h3>Week 3</h3>
+    <a href="notes/rlc.html">Topic</a>
+    <a href="videos/week3.html">Video</a>
+    <a href="quizzes/rlc.html">Quiz</a>
+
+</div>
+
+<header>
+    <h1>IntroElectric</h1>
+    <p>Learn Circuit Theory the Smart Way</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="lecture-notes.html">Lecture Notes</a></li>
+        <li><a href="quizzes.html">Quizzes</a></li>
+        <li><a href="video-library.html">Videos</a></li>
+    </ul>
+</nav>
+
+<section class="features">
+    <a href="lecture-notes.html" class="feature-card">📘 Lecture Notes</a>
+    <a href="quizzes.html" class="feature-card">🧠 Quizzes</a>
+    <a href="video-library.html" class="feature-card">🎥 Videos</a>
+</section>
+
+<footer>
+    © 2026 IntroElectric
+</footer>
+
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
