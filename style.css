@@ -358,3 +358,90 @@ footer {
         font-size: 0.85em;
     }
 }
+/* ========== QUIZ PAGE DESIGN ========== */
+
+/* Question box (white card like your site) */
+.question {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    text-align: left;
+    transition: 0.3s;
+}
+
+.question:hover {
+    transform: translateY(-3px);
+}
+
+/* Question text */
+.question p {
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+/* Answer options */
+.question label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.question label:hover {
+    background: rgba(102,126,234,0.1);
+}
+
+/* CORRECT ANSWER BOX (GREEN TRANSPARENT) */
+.answer-correct {
+    background: rgba(40, 167, 69, 0.15);
+    border-left: 4px solid #28a745;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: #155724;
+}
+
+/* WRONG ANSWER BOX (RED TRANSPARENT) */
+.answer-wrong {
+    background: rgba(220, 53, 69, 0.15);
+    border-left: 4px solid #dc3545;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: #721c24;
+}
+
+/* RESULT BOX */
+#result {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+}
+
+/* SUBMIT BUTTON MATCHES SITE */
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102,126,234,0.3);
+}
