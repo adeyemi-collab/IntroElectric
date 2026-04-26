@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ohm's Law Video</title>
+     <link rel="stylesheet" href="../style.css">
+</head>
+
+<!-- MENU BUTTON -->
+<button class="menu-btn" onclick="toggleSidebar()">☰ Menu</button>
+
+<!-- SIDEBAR -->
+<div id="sidebar" class="sidebar">
+
+    <h2>Course Content</h2>
+
+    <h3>Week 1</h3>
+    <a href="notes/ohms-law.html">Topic</a>
+    <a href="videos/week1.html">Video</a>
+    <a href="quizzes/fundamentals.html">Quiz</a>
+
+    <h3>Week 2</h3>
+    <a href="notes/kirchhoff.html">Topic</a>
+    <a href="videos/week2.html">Video</a>
+    <a href="quizzes/circuit-theorems.html">Quiz</a>
+
+    <h3>Week 3</h3>
+    <a href="notes/rlc.html">Topic</a>
+    <a href="videos/week3.html">Video</a>
+    <a href="quizzes/rlc.html">Quiz</a>
+
+</div>
+<body>
+    <header>
+        <h1>Introdution to LTSpice</h1>
+    </header>
+    
+<div class="container">
+    <!-- Standard Video Player -->
+    <video width="640" height="360" controls>
+        <source src="ohms-law.mp4" type="video/mp4">
+        
+    </video>
+</div>
+    <footer>
+    © 2026 IntroElectric
+</footer>
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("active");
+}
+</script>
+</body>
+</html>
