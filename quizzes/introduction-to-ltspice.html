@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LTSpice Intro Quiz</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="quiz-page">
+
+<header>
+    <h1>Intro to LTSpice Quiz</h1>
+</header>
+
+<div class="container">
+
+<form id="quizForm">
+
+<!-- Q1 -->
+<div class="question">
+<p>1. What is LTSpice mainly used for?</p>
+<label><input type="radio" name="q1" value="a"> Word processing</label>
+<label><input type="radio" name="q1" value="b"> Circuit simulation</label>
+<label><input type="radio" name="q1" value="c"> Video editing</label>
+<div class="feedback" id="f1"></div>
+</div>
+
+<!-- Q2 -->
+<div class="question">
+<p>2. What does a schematic represent?</p>
+<label><input type="radio" name="q2" value="a"> Physical layout</label>
+<label><input type="radio" name="q2" value="b"> Circuit diagram</label>
+<label><input type="radio" name="q2" value="c"> Code</label>
+<div class="feedback" id="f2"></div>
+</div>
+
+<!-- Q3 -->
+<div class="question">
+<p>3. Which component provides voltage?</p>
+<label><input type="radio" name="q3" value="a"> Resistor</label>
+<label><input type="radio" name="q3" value="b"> Voltage source</label>
+<label><input type="radio" name="q3" value="c"> Ground</label>
+<div class="feedback" id="f3"></div>
+</div>
+
+<!-- Q4 -->
+<div class="question">
+<p>4. Why is ground needed?</p>
+<label><input type="radio" name="q4" value="a"> Decoration</label>
+<label><input type="radio" name="q4" value="b"> Reference point</label>
+<label><input type="radio" name="q4" value="c"> Cooling</label>
+<div class="feedback" id="f4"></div>
+</div>
+
+<!-- Q5 -->
+<div class="question">
+<p>5. What happens if no ground is added?</p>
+<label><input type="radio" name="q5" value="a"> Simulation fails</label>
+<label><input type="radio" name="q5" value="b"> Works normally</label>
+<label><input type="radio" name="q5" value="c"> Faster simulation</label>
+<div class="feedback" id="f5"></div>
+</div>
+
+<!-- Q6 -->
+<div class="question">
+<p>6. What does “Run” do?</p>
+<label><input type="radio" name="q6" value="a"> Deletes circuit</label>
+<label><input type="radio" name="q6" value="b"> Starts simulation</label>
+<label><input type="radio" name="q6" value="c"> Saves file</label>
+<div class="feedback" id="f6"></div>
+</div>
+
+<!-- Q7 -->
+<div class="question">
+<p>7. What is used to connect components?</p>
+<label><input type="radio" name="q7" value="a"> Wire tool</label>
+<label><input type="radio" name="q7" value="b"> Text tool</label>
+<label><input type="radio" name="q7" value="c"> Zoom tool</label>
+<div class="feedback" id="f7"></div>
+</div>
+
+<!-- Q8 -->
+<div class="question">
+<p>8. What does a resistor do?</p>
+<label><input type="radio" name="q8" value="a"> Increases voltage</label>
+<label><input type="radio" name="q8" value="b"> Opposes current</label>
+<label><input type="radio" name="q8" value="c"> Stores energy</label>
+<div class="feedback" id="f8"></div>
+</div>
+
+<!-- Q9 -->
+<div class="question">
+<p>9. What is simulation?</p>
+<label><input type="radio" name="q9" value="a"> Real circuit building</label>
+<label><input type="radio" name="q9" value="b"> Virtual testing</label>
+<label><input type="radio" name="q9" value="c"> Coding</label>
+<div class="feedback" id="f9"></div>
+</div>
+
+<!-- Q10 -->
+<div class="question">
+<p>10. What can LTSpice display?</p>
+<label><input type="radio" name="q10" value="a"> Graphs</label>
+<label><input type="radio" name="q10" value="b"> Videos</label>
+<label><input type="radio" name="q10" value="c"> Images only</label>
+<div class="feedback" id="f10"></div>
+</div>
+
+<button type="button" onclick="checkAnswers()">Submit</button>
+
+<div id="result"></div>
+
+</form>
+
+</div>
+
+<script>
+function checkAnswers() {
+
+const answers = {
+q1:"b", q2:"b", q3:"b", q4:"b", q5:"a",
+q6:"b", q7:"a", q8:"b", q9:"b", q10:"a"
+};
+
+const explanations = {
+q1:"LTSpice is used to simulate electronic circuits.",
+q2:"A schematic is a symbolic circuit diagram.",
+q3:"A voltage source provides electrical energy.",
+q4:"Ground provides a reference point for voltages.",
+q5:"Without ground, LTSpice cannot simulate properly.",
+q6:"Run starts the simulation.",
+q7:"The wire tool connects components.",
+q8:"Resistors oppose current flow.",
+q9:"Simulation means testing virtually.",
+q10:"LTSpice displays graphs of voltage/current."
+};
+
+let score = 0;
+
+for (let key in answers) {
+let selected = document.querySelector('input[name="'+key+'"]:checked');
+let feedback = document.getElementById("f"+key.substring(1));
+
+if (selected) {
+    if (selected.value === answers[key]) {
+        score++;
+        feedback.innerHTML = "✅ Correct";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerHTML = "❌ " + explanations[key];
+        feedback.style.color = "red";
+    }
+} else {
+    feedback.innerHTML = "⚠️ Please select an answer";
+}
+}
+
+document.getElementById("result").innerHTML = 
+"<h3>Your Score: " + score + "/10</h3>";
+
+}
+</script>
+
+</body>
+</html>
