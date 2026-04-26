@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kirchhoff’s Laws Quiz</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="quiz-page">
+
+<header>
+    <h1>Kirchhoff’s Laws Quiz</h1>
+</header>
+<div id="sidebar" class="sidebar">
+
+    <h2>Course Content</h2>
+
+    <h3>Week 1</h3>
+    <a href="notes/ohms-law.html">Topic</a>
+    <a href="videos/week1.html">Video</a>
+    <a href="quizzes/fundamentals.html">Quiz</a>
+
+    <h3>Week 2</h3>
+    <a href="notes/kirchhoff.html">Topic</a>
+    <a href="videos/week2.html">Video</a>
+    <a href="quizzes/circuit-theorems.html">Quiz</a>
+
+    <h3>Week 3</h3>
+    <a href="notes/rlc.html">Topic</a>
+    <a href="videos/week3.html">Video</a>
+    <a href="quizzes/rlc.html">Quiz</a>
+
+</div>
+<div id="sidebar" class="sidebar">
+
+    <h2>Course Content</h2>
+
+    <h3>Week 1</h3>
+    <a href="notes/ohms-law.html">Topic</a>
+    <a href="videos/week1.html">Video</a>
+    <a href="quizzes/fundamentals.html">Quiz</a>
+
+    <h3>Week 2</h3>
+    <a href="notes/kirchhoff.html">Topic</a>
+    <a href="videos/week2.html">Video</a>
+    <a href="quizzes/circuit-theorems.html">Quiz</a>
+
+    <h3>Week 3</h3>
+    <a href="notes/rlc.html">Topic</a>
+    <a href="videos/week3.html">Video</a>
+    <a href="quizzes/rlc.html">Quiz</a>
+
+</div>
+
+<div class="container">
+
+<form id="quizForm">
+
+<!-- THEORY QUESTIONS -->
+
+<div class="question">
+<p>1. What does Kirchhoff’s Current Law (KCL) state?</p>
+<label><input type="radio" name="q1" value="a"> Voltage is constant</label>
+<label><input type="radio" name="q1" value="b"> Sum of currents at a node = 0</label>
+<label><input type="radio" name="q1" value="c"> Power is conserved</label>
+<div id="f1"></div>
+</div>
+
+<div class="question">
+<p>2. Kirchhoff’s Voltage Law (KVL) applies to:</p>
+<label><input type="radio" name="q2" value="a"> Nodes</label>
+<label><input type="radio" name="q2" value="b"> Loops</label>
+<label><input type="radio" name="q2" value="c"> Resistors</label>
+<div id="f2"></div>
+</div>
+
+<div class="question">
+<p>3. KCL is based on conservation of:</p>
+<label><input type="radio" name="q3" value="a"> Energy</label>
+<label><input type="radio" name="q3" value="b"> Charge</label>
+<label><input type="radio" name="q3" value="c"> Power</label>
+<div id="f3"></div>
+</div>
+
+<div class="question">
+<p>4. KVL states that total voltage in a loop equals:</p>
+<label><input type="radio" name="q4" value="a"> Maximum voltage</label>
+<label><input type="radio" name="q4" value="b"> Zero</label>
+<label><input type="radio" name="q4" value="c"> Current</label>
+<div id="f4"></div>
+</div>
+
+<div class="question">
+<p>5. A node is:</p>
+<label><input type="radio" name="q5" value="a"> A power source</label>
+<label><input type="radio" name="q5" value="b"> A connection point</label>
+<label><input type="radio" name="q5" value="c"> A resistor</label>
+<div id="f5"></div>
+</div>
+
+<!-- LTSPICE QUESTIONS -->
+
+<div class="question">
+<p>6. In LTSpice, how do you measure current at a node?</p>
+<label><input type="radio" name="q6" value="a"> Use voltage probe</label>
+<label><input type="radio" name="q6" value="b"> Click on a wire</label>
+<label><input type="radio" name="q6" value="c"> Use text tool</label>
+<div id="f6"></div>
+</div>
+
+<div class="question">
+<p>7. A node has currents: 2A entering, 1A leaving. What is the missing current?</p>
+<label><input type="radio" name="q7" value="a"> 1A leaving</label>
+<label><input type="radio" name="q7" value="b"> 3A entering</label>
+<label><input type="radio" name="q7" value="c"> 1A entering</label>
+<div id="f7"></div>
+</div>
+
+<div class="question">
+<p>8. In a loop, voltages are 10V source and drops of 4V and 6V. What does KVL show?</p>
+<label><input type="radio" name="q8" value="a"> Balanced loop</label>
+<label><input type="radio" name="q8" value="b"> Extra voltage</label>
+<label><input type="radio" name="q8" value="c"> Missing current</label>
+<div id="f8"></div>
+</div>
+
+<div class="question">
+<p>9. In LTSpice, what graph helps verify KVL?</p>
+<label><input type="radio" name="q9" value="a"> Voltage graph</label>
+<label><input type="radio" name="q9" value="b"> Image</label>
+<label><input type="radio" name="q9" value="c"> Code output</label>
+<div id="f9"></div>
+</div>
+
+<div class="question">
+<p>10. If currents into a node equal currents out, the node obeys:</p>
+<label><input type="radio" name="q10" value="a"> Ohm’s Law</label>
+<label><input type="radio" name="q10" value="b"> KCL</label>
+<label><input type="radio" name="q10" value="c"> KVL</label>
+<div id="f10"></div>
+</div>
+
+<button type="button" onclick="checkAnswers()">Submit</button>
+
+<div id="result"></div>
+
+</form>
+
+</div>
+
+<script>
+function checkAnswers() {
+
+const answers = {
+q1:"b", q2:"b", q3:"b", q4:"b", q5:"b",
+q6:"b", q7:"a", q8:"a", q9:"a", q10:"b"
+};
+
+const explanations = {
+q1:"KCL states sum of currents entering and leaving a node is zero.",
+q2:"KVL applies to closed loops.",
+q3:"KCL is based on conservation of charge.",
+q4:"Total voltage in a loop equals zero.",
+q5:"A node is where components connect.",
+q6:"Clicking a wire shows current in LTSpice.",
+q7:"2A in, 1A out → remaining 1A must leave.",
+q8:"10V = 4V + 6V → balanced loop.",
+q9:"Voltage graphs help verify KVL.",
+q10:"Equal currents means KCL is satisfied."
+};
+
+let score = 0;
+
+for (let key in answers) {
+let selected = document.querySelector('input[name="'+key+'"]:checked');
+let feedback = document.getElementById("f"+key.substring(1));
+
+if (selected) {
+    if (selected.value === answers[key]) {
+        score++;
+        feedback.innerHTML = "✅ Correct";
+        feedback.className = "answer-correct";
+    } else {
+        feedback.innerHTML = "❌ " + explanations[key];
+        feedback.className = "answer-wrong";
+    }
+} else {
+    feedback.innerHTML = "⚠️ Select an answer";
+}
+}
+
+document.getElementById("result").innerHTML =
+"<h3>Your Score: " + score + "/10</h3>";
+
+}
+</script>
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("active");
+}
+</script>
+</body>
+</html>
